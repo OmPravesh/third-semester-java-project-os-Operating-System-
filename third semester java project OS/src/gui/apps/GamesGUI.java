@@ -1,6 +1,9 @@
 package gui.apps;
 
 import games.DoomBrickEdition; // Ensure this matches your package structure
+import gui.games.AdventureQuestGUI;
+import gui.games.GameFrame;
+import gui.games.TypingSpeedTestGUI;
 import util.ThemeManager;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -25,19 +28,22 @@ public class GamesGUI extends JDialog {
         add(createGameButton("⌨️ Typing Speed Test", new Color(100, 180, 255), e -> {
             dispose();
             // Assuming your TypingSpeedTestGUI class is available
-            // new TypingSpeedTestGUI();
+            // // new TypingSpeedTestGUI();
+            SwingUtilities.invokeLater(() -> new TypingSpeedTestGUI());
         }));
 
         add(createGameButton("🏰 Adventure Quest", new Color(255, 180, 100), e -> {
             dispose();
             // Assuming your AdventureQuestGUI class is available
             // new AdventureQuestGUI();
+            SwingUtilities.invokeLater(() -> new AdventureQuestGUI());
         }));
 
         add(createGameButton("🐍 Snake Game", new Color(100, 255, 100), e -> {
             dispose();
             // Assuming your GameFrame class is available
             // new GameFrame();
+            SwingUtilities.invokeLater(() -> new GameFrame());
         }));
 
         // --- UPDATED DOOM BUTTON ---
