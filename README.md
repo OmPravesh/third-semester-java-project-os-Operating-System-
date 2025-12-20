@@ -49,6 +49,57 @@ src/
     ├── games/           # Game implementations
     └── components/      # Reusable GUI components
 ```
+<div align="center">
+
+### Login & Dashboard
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/login-screenshot.png" width="400" alt="Login Screen"><br>
+      <b>Login Screen</b>
+    </td>
+    <td align="center">
+      <img src="./images/dashboard-screenshot.png" width="400" alt="Dashboard"><br>
+      <b>Dashboard</b>
+    </td>
+  </tr>
+</table>
+
+### Applications
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/stock-market.png" width="400" alt="Stock Market"><br>
+      <b>Stock Market</b>
+    </td>
+    <td align="center">
+      <img src="./images/chatapp.png" width="400" alt="Chat App"><br>
+      <b>Chat Application</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./images/calculator.png" width="400" alt="Calculator"><br>
+      <b>Calculator</b>
+    </td>
+    <td align="center">
+      <img src="./images/util.png" width="400" alt="Utilities"><br>
+      <b>Utilities</b>
+    </td>
+  </tr>
+     <tr>
+    <td align="center">
+      <img src="./images/snake.png" width="400" alt="Calculator"><br>
+      <b>Calculator</b>
+    </td>
+    <td align="center">
+      <img src="./images/type.png" width="400" alt="Utilities"><br>
+      <b>Utilities</b>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ## Code Quality & Testing
 
