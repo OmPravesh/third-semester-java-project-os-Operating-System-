@@ -90,11 +90,11 @@ src/
      <tr>
     <td align="center">
       <img src="./images/snake.png" width="400" alt="Calculator"><br>
-      <b>Calculator</b>
+      <b>Sanke Game</b>
     </td>
     <td align="center">
       <img src="./images/type.png" width="400" alt="Utilities"><br>
-      <b>Utilities</b>
+      <b>Type Speed Game</b>
     </td>
   </tr>
 </table>
