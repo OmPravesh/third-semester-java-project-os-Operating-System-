@@ -34,21 +34,6 @@ GUI OS is a Java Swing–based desktop operating system simulation featuring mul
 - **Build Tool**: Maven/Gradle (implied)
 - **Version Control**: Git
 
-##  Project Structure
-
-```
-src/
-├── main/                 # Application entry point
-├── model/               # Data models (User, Stock, Transaction)
-├── dao/                 # Data Access Objects (UserDAO, TransactionDAO)
-├── service/             # Business logic (NotesApp)
-├── util/                # Utilities (DatabaseUtil, ThemeManager)
-└── gui/
-    ├── auth/            # Authentication GUI
-    ├── apps/            # Main applications
-    ├── games/           # Game implementations
-    └── components/      # Reusable GUI components
-```
 <div align="center">
 
 ### Login & Dashboard
@@ -134,7 +119,7 @@ src/
 
 | Member | Role | Key Contributions |
 |--------|------|-------------------|
-| **Om Pravesh** (Team Admin) | Project Lead & Architect | - Overall system architecture design<br>- Database schema and JDBC implementation<br>- Payment system with transaction management<br>- Theme Manager and UI consistency<br>- Integration testing and bug fixes |
+| **Om Pravesh** (Team Admin) | Project Lead & Architect | - Overall system architecture design<br>- Database schema and JDBC implementation<br>- Payment system with transaction management<br>- Servlet/JSP (Java EE), Jetty 11.0.18 (Java 23 compatible), Maven 3.9.5 implementation<br>- Theme Manager and UI consistency<br>- Integration testing and bug fixes |
 | **Diya** | GUI Developer & Game Programmer | - Complete Stock Market GUI with real-time graphs<br>- Adventure Quest RPG game implementation<br>- Calculator and Utilities applications<br>- Notes app with file system integration<br>- UI theme implementation and styling |
 | **Urvi** | Game Developer & Tester | - DOOM Brick Edition 3D game with shooting mechanics<br>- Snake game with modern graphics and animations<br>- Typing Speed Test application<br>- Rock Paper Scissors and Number Guessing games<br>- Comprehensive application testing and debugging |
 
@@ -178,65 +163,193 @@ src/
 2. MySQL Server 5.7+
 3. MySQL JDBC Connector
 
-### Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/gui-os-java.git
-   ```
+🚀 PROJECT DEPLOYMENT STATUS
 
-2. Import the project into your favorite IDE (Eclipse/IntelliJ)
+═══════════════════════════════════════════════════════════════════════════════
 
-3. Configure MySQL database:
-   ```sql
-   CREATE DATABASE project;
-   CREATE USER 'root'@'localhost' IDENTIFIED BY 'gtaomp23';
-   GRANT ALL PRIVILEGES ON project.* TO 'root'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
+STATUS: ✅ SERVER LAUNCHING
 
-4. Update database credentials in `DatabaseUtil.java` if needed
+Date/Time: December 22, 2025
+Server:   Jetty 11.0.18
+Port:     8080
+Process:  ✅ RUNNING (Java Process ID: 9716)
 
-5. Add MySQL JDBC driver to classpath
+═══════════════════════════════════════════════════════════════════════════════
 
-6. Run `JavaGuiOs.main()` to start the application
+WHAT'S HAPPENING:
 
-## Database Schema
+✅ Maven build completed successfully
+✅ WAR file packaged and ready
+✅ Jetty server process started
+⏳ Dependencies downloading from Maven Central
+⏳ Server initialization in progress
 
-```sql
-CREATE TABLE users (
-    username VARCHAR(50) PRIMARY KEY,
-    password VARCHAR(100) NOT NULL,
-    balance DOUBLE NOT NULL
-);
+Estimated wait time: 2-3 minutes (first run only)
 
-CREATE TABLE transactions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    sender VARCHAR(50) NOT NULL,
-    recipient VARCHAR(50) NOT NULL,
-    amount DOUBLE NOT NULL,
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
+═══════════════════════════════════════════════════════════════════════════════
 
-## How to Use
+HOW TO ACCESS:
 
-1. **Launch Application**: Run `JavaGuiOs` class
-2. **Login**: Use default credentials or register new account
-3. **Explore Dashboard**: Click on application icons to launch
-4. **Try Features**:
-   - Transfer money in Payment System
-   - Buy/sell stocks in Stock Market
-   - Play games in Arcade Menu
-   - Chat with peers (requires two instances)
-   - Change themes in Settings
+1. Open Browser Window: ✅ READY (already opened)
+2. Wait for server to fully initialize
+3. Page will auto-refresh or navigate to:
+   
+   → http://localhost:8080/
 
-## Future Enhancements
+4. When loaded, you'll see the login page
 
-1. **Database Encryption**: Secure sensitive user data
-2. **Network Multiplayer**: Online gaming features
-3. **Plugin System**: Third-party application support
-4. **Mobile Compatibility**: Responsive design for tablets
-5. **Analytics Dashboard**: Usage statistics and reporting
+═══════════════════════════════════════════════════════════════════════════════
+
+LOGIN CREDENTIALS:
+
+Username: admin
+Password: admin123
+
+Starting Balance: $50,000
+
+═══════════════════════════════════════════════════════════════════════════════
+
+AVAILABLE FEATURES:
+
+✨ Game Center
+   ├─ Snake Game (with 3 difficulty levels)
+   ├─ Puzzle Game (memory matching)
+   └─ Leaderboard (top 10 scores)
+
+💬 Chat System
+   ├─ Create chat rooms
+   ├─ Send and receive messages
+   └─ View message history
+
+💳 Digital Payment
+   ├─ Deposit funds
+   ├─ Withdraw funds
+   ├─ Transfer between users
+   └─ Transaction history
+
+📈 Stock Market (existing feature)
+
+📝 Notes App (existing feature)
+
+👤 User Dashboard
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TERMINAL OUTPUT SHOWS:
+
+✅ Build Status: SUCCESS
+✅ WAR Package: third-semester-web-project.war (created)
+✅ Server: Starting on port 8080
+✅ Java Process: Running (CPU active)
+✅ Dependencies: Downloading
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHAT TO DO WHILE WAITING:
+
+Option 1: Wait for automatic page load
+- The browser window is open
+- It will detect the server when ready
+- Page will auto-update
+
+Option 2: Manual refresh
+- Keep the browser open
+- Refresh every 30 seconds
+- When you see the login page, you're ready!
+
+Option 3: Monitor terminal
+- Watch for "Jetty server started" message
+- Server will be ready shortly after
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FIRST-TIME INITIALIZATION CHECKLIST:
+
+✅ Maven installed successfully
+✅ Project built without errors
+✅ Jetty web server configured
+✅ All dependencies being downloaded
+✅ Database initialization ready (auto on first login)
+✅ Browser window opened
+
+═══════════════════════════════════════════════════════════════════════════════
+
+EXPECTED SEQUENCE:
+
+1. ✅ Dependencies download (in progress)
+2. ⏳ Server initialization (next)
+3. ⏳ First login creates database tables
+4. ⏳ Application fully loaded
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING:
+
+If page doesn't load after 5 minutes:
+
+1. Check terminal for errors:
+   → Look for "SEVERE" or "ERROR" messages
+
+2. Refresh the browser:
+   → Ctrl+R or Cmd+R
+
+3. Check if port is available:
+   → Should be localhost:8080
+
+4. If still not working:
+   → Server may need more time
+   → Close and reopen browser
+   → Try http://localhost:8080/login.jsp
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TECHNICAL DETAILS:
+
+Framework: Servlet/JSP (Java EE)
+Server: Jetty 11.0.18 (Java 23 compatible)
+Build Tool: Maven 3.9.5
+Database: MySQL (local)
+Java Version: 23.0.2
+Application Package: WAR (Web Archive)
+Deployment: Embedded Jetty
+
+═══════════════════════════════════════════════════════════════════════════════
+
+NEXT STEPS AFTER LOGIN:
+
+1. Dashboard: View account balance and activity
+2. Play Games: Try Snake or Puzzle games
+3. Chat: Create a room and send messages
+4. Payments: Try deposit/withdraw operations
+5. Leaderboard: Check your game scores
+6. Transaction History: View your payments
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🌐 BROWSER ACCESS:
+
+→ http://localhost:8080/
+→ Or refresh the already-opened browser window
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⏳ ESTIMATED TIME REMAINING:
+
+Dependencies Download: 2-3 minutes
+Server Initialization: 1-2 minutes
+Database Setup: (automatic on first use)
+Total: ~5 minutes maximum
+
+═══════════════════════════════════════════════════════════════════════════════
+
+STATUS: 🟡 INITIALIZING → 🟢 ONLINE (very soon)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Generated: December 22, 2025
+Report: PROJECT DEPLOYMENT IN PROGRESS
+
+═══════════════════════════════════════════════════════════════════════════════
 
 ## Academic Justification
 
@@ -256,566 +369,428 @@ This project fulfills all requirements for a comprehensive Java programming asse
 ---
 
 
-## Table of contents
+# Third Semester Java Project - Comprehensive Web Application
 
-* [Project overview](#project-overview)
-* [Repository structure](#repository-structure)
-* [Prerequisites](#prerequisites)
-* [Configure database credentials](#configure-database-credentials)
-* [Add MySQL Connector/J (JDBC) to project](#add-mysql-connectoj-to-project)
+A complete Java-based web application with multiple integrated features including games, chat system, digital payment system, stock market, and more.
 
-  * [IntelliJ IDEA](#intellij-idea)
-  * [Command line / Manual](#command-line--manual)
-  * [Maven (recommended)](#maven-recommended)
-  * [Gradle](#gradle)
-* [Build and run](#build-and-run)
+## 🌟 Features
 
-  * [Run from IntelliJ](#run-from-intellij)
-  * [Run from command line (javac/java)](#run-from-command-line-javacjava)
-  * [Create runnable JAR (fat/uber JAR)](#create-runnable-jar-fatuber-jar)
-* [Database initialization & schema](#database-initialization--schema)
-* [Notes & troubleshooting](#notes--troubleshooting)
-* [Useful files / screenshots](#useful-files--screenshots)
+### 1. **Authentication & User Management**
+- User login/logout functionality
+- Session management (30-minute timeout)
+- Admin user pre-created with credentials (admin/admin123)
+- Default balance: $10,000 per user
 
----
+### 2. **Game Center** 🎮
+- **Snake Game**
+  - Classic snake game mechanics
+  - Three difficulty levels: Easy, Medium, Hard
+  - Speed increases with difficulty
+  - Leaderboard tracking
+  - Local high-score storage
 
-## Prerequisites
+- **Puzzle Game**
+  - Memory matching game with 8 pairs
+  - Move counter
+  - Three difficulty levels
+  - Score calculation based on moves
+  - Leaderboard integration
 
-* Java JDK 11+ installed (JDK 17 or later recommended).
-* MySQL server (or remote MySQL-compatible service) OR a free hosted DB (we have used `freesqldatabase.com` in the code example).
-* MySQL Connector/J (JDBC) JAR.
-* (Optional) IntelliJ IDEA or other Java IDE.
+- **Leaderboard System**
+  - Top scores for each game type
+  - Difficulty level display
+  - Rank badges (Gold, Silver, Bronze)
+  - User statistics tracking
 
----
+### 3. **Chat System** 💬
+- Create and manage chat rooms
+- Real-time messaging
+- View all active chat rooms
+- Message history per room
+- User identification for messages
+- Delete messages and rooms
 
-## Configure database credentials
+### 4. **Digital Payment System** 💳
+- Account balance management
+- Deposit funds (Credit Card, Debit Card, Digital Wallet, Bank Transfer)
+- Withdraw funds
+- Money transfer between users
+- Transaction history with detailed information
+- Payment method tracking
+- Transaction status (Pending, Completed, Failed)
 
-Open `DatabaseUtil` in the source and update these fields for your environment:
+### 5. **Stock Market** 📈
+- View stock listings
+- Real-time price updates (simulated)
+- Portfolio management
+- Buy/sell stocks
+- Track holdings
+- Market trends
 
-```java
-private static final String DB_URL = "jdbc:mysql://HOST:3306/DATABASE_NAME";
-private static final String DB_USER = "your_db_username";
-private static final String DB_PASS = "your_db_password";
-```
+### 6. **Notes Application** 📝
+- Create, read, update notes
+- Note titles and content
+- User-specific notes
+- Timestamp tracking
 
-If you use a remote/hosed DB, include the host name and correct port. If using MySQL 8+ ensure you use the `com.mysql.cj.jdbc.Driver` and `jdbc:mysql://...` (the code uses `com.mysql.cj.jdbc.Driver`).
+### 7. **Dashboard** 🏠
+- Welcome message with user info
+- Quick balance display
+- Last login information
+- Feature shortcuts
+- Profile management
 
-> Security tip: Do not commit plaintext credentials into public repos. Consider using environment variables (see below).
+## 📊 Database Schema
 
-### Use environment variables (safer)
+### Tables
 
-Modify `getConnection()` or add helper to read env vars:
-
-```java
-String url = System.getenv().getOrDefault("JDBC_URL", DB_URL);
-String user = System.getenv().getOrDefault("JDBC_USER", DB_USER);
-String pass = System.getenv().getOrDefault("JDBC_PASS", DB_PASS);
-DriverManager.getConnection(url, user, pass);
-```
-
-Then run with:
-
-```bash
-export JDBC_URL="jdbc:mysql://localhost:3306/mydb"
-export JDBC_USER="me"
-export JDBC_PASS="secret"
-java -cp ".:lib/mysql-connector-j-9.5.0.jar" JavaGuiOs
-```
-
----
-
-## Add MySQL Connector/J (JDBC) to project
-
-You must make the MySQL JDBC driver available on the classpath at compile-time and run-time.
-
-### IntelliJ IDEA
-
-1. `File` → `Project Structure...` → `Libraries` → `+` → add the `mysql-connector-j-<version>.jar` from your `lib/` or downloaded location.
-2. Or add it to `Module` → `Dependencies` so it appears under **External Libraries** (you already have `mysql-connector-j-9.5.0` visible in the screenshot).
-3. Rebuild project and run.
-
-### Command line / Manual
-
-1. Download the driver: [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
-2. Place `mysql-connector-j-<version>.jar` into your project's `lib/` folder.
-3. Compile & run with the jar on the classpath (examples below).
-
-### Maven (recommended for dependency management)
-
-Add to `pom.xml` dependencies:
-
-```xml
-<dependencies>
-  <dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-j</artifactId>
-    <version>9.0.0</version>
-  </dependency>
-</dependencies>
-```
-
-Then `mvn package` and use the Maven exec plugin or build a shaded (uber) jar.
-
-### Gradle
-
-Add to `build.gradle`:
-
-```gradle
-dependencies {
-  implementation 'mysql:mysql-connector-j:9.0.0'
-}
-```
-
----
-
-## Build and run
-
-Below are the common ways to run the project.
-
-### Run from IntelliJ
-
-1. Ensure `mysql-connector-j` is added as a library/dependency.
-2. Open `JavaGuiOs.java` and run the `main` method (green ▶ icon).
-3. When prompt appears in console, enter username/password, or let it create a new account.
-
-### Run from command line (javac/java)
-
-Assume:
-
-* `src/JavaGuiOs.java` (single-file for simplicity)
-* `lib/mysql-connector-j-9.5.0.jar`
-
-Compile:
-
-```bash
-javac -d out -cp lib/mysql-connector-j-9.5.0.jar src/JavaGuiOs.java
-```
-
-Run (Linux/macOS):
-
-```bash
-java -cp "out:lib/mysql-connector-j-9.5.0.jar" JavaGuiOs
-```
-
-Run (Windows PowerShell/CMD):
-
-```powershell
-java -cp "out;lib\mysql-connector-j-9.5.0.jar" JavaGuiOs
-```
-
-If your main class is in a package, use the fully-qualified class name (e.g. `com.example.JavaGuiOs`).
-
-### Create runnable JAR (fat/uber JAR)
-
-If you want a single distributable JAR that includes the MySQL driver use the Maven Shade plugin, Gradle shadow plugin, or manually include the jar contents.
-
-**Maven Shade example** (in `pom.xml`):
-
-```xml
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-shade-plugin</artifactId>
-      <version>3.2.4</version>
-      <executions>
-        <execution>
-          <phase>package</phase>
-          <goals><goal>shade</goal></goals>
-          <configuration>
-            <transformers>
-              <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                <mainClass>JavaGuiOs</mainClass>
-              </transformer>
-            </transformers>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
-  </plugins>
-</build>
-```
-
-After `mvn package`, run:
-
-```bash
-java -jar target/yourapp-shaded.jar
-```
-
----
-
-## Database initialization & schema
-
-The code's `DatabaseUtil.initializeDatabase()` will run the following statements (so you normally do not need to run them manually):
-
+#### Users
 ```sql
-CREATE TABLE IF NOT EXISTS users (
-  username VARCHAR(50) PRIMARY KEY,
-  password VARCHAR(100) NOT NULL,
-  balance DOUBLE NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS transactions (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  sender VARCHAR(50) NOT NULL,
-  recipient VARCHAR(50) NOT NULL,
-  amount DOUBLE NOT NULL,
-  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+CREATE TABLE users (
+    username VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(100) NOT NULL,
+    balance DOUBLE DEFAULT 10000.00
+)
 ```
 
-If you prefer to create the schema manually, run the SQL above on your MySQL instance. Make sure the DB user you provide has `CREATE`, `SELECT`, `INSERT`, `UPDATE`, `DELETE` privileges for the database.
-
----
-
-## Notes & troubleshooting
-
-* **Driver not found**: If you see `MySQL Driver not found. Ensure JDBC connector is in classpath` check that the connector jar is on your runtime classpath. In IDE add it as library; in command line include `-cp lib/mysql-connector-j-*.jar`.
-* **Access denied**: Confirm DB user, password and host allow remote connections (and that your host firewall / DB server accept remote access).
-* **Timezone / auth errors**: For newer MySQL, include `?serverTimezone=UTC&useSSL=false` or similar in JDBC URL if needed:
-
-  ```text
-  jdbc:mysql://host:3306/dbname?serverTimezone=UTC&useSSL=false
-  ```
-* **Port conflicts**: The chat server uses sockets (default 5000 in UI). Use a free port or run only one instance of server mode.
-* **Threading**: DB calls in the UI are done on separate threads in the code. If you modify code ensure long-running DB ops remain off the EDT.
-
----
-
-## Useful files / screenshots
-
-Project screenshots (these were uploaded to the session):
-
-* `/mnt/data/2c40a523-a50c-4abe-98b9-0c499c0be9da.png`
-* `/mnt/data/d834069a-42a4-41b0-a698-55fbdd58bbbc.png`
-* `/mnt/data/8f6ad09d-e68d-423f-a169-936773a6f2fb.png`
-* `/mnt/data/74305148-6447-44ab-8c00-25aa42e1b20a.png`
-* `/mnt/data/e74a36b5-bf7e-41c4-8050-3ee671bdd366.png`
-
----
-
-## Quick start (summary)
-
-1. Put `mysql-connector-j-<version>.jar` into `lib/` or add dependency via Maven/Gradle.
-2. Update DB credentials in `DatabaseUtil` or export env vars.
-3. Compile & run (`javac` / `java` or use IDE).
-4. When the app starts, log in using console prompt — a new user will be created automatically if not found.
-
----
-
-If you want, I can:
-
-* Split `JavaGuiOs.java` into packages and multiple files (models, dao, ui) and provide a `pom.xml` or `build.gradle` with the right dependency versions and a runnable packaging configuration.
-* Prepare a small `pom.xml` for Maven with the Shade plugin so you can build a single jar.
-
-
----
-
-## OOP Implementation
-
-### Flowchart: OOP Structure
-
-```mermaid
-graph TD
-    subgraph Presentation ["Presentation Layer (Inheritance)"]
-        style Presentation fill:#f9f9f9,stroke:#333,stroke-width:2px
-        Base[JFrame / JDialog]
-        GUI[GUI Classes]
-        Base -->|Extends| GUI
-    end
-
-    subgraph DataAccess ["Data Access Layer (Polymorphism)"]
-        style DataAccess fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
-        Interface[<< Interface >>\nDataAccessor]
-        DAO[UserDAO]
-        Interface -.->|Implements| DAO
-    end
-
-    subgraph Model ["Entity Layer (Encapsulation)"]
-        style Model fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-        User[User Class]
-        Fields[Private Fields\nGetters & Setters]
-        User --- Fields
-    end
-
-    GUI -->|Calls Methods| Interface
-    DAO -->|Returns Objects| User
+#### Games
+```sql
+CREATE TABLE games (
+    game_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    game_type VARCHAR(50) NOT NULL,
+    score INT DEFAULT 0,
+    time_spent INT DEFAULT 0,
+    difficulty VARCHAR(20) DEFAULT 'Easy',
+    status VARCHAR(20) DEFAULT 'In Progress',
+    played_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (username) REFERENCES users(username)
+)
 ```
 
-
-### **Object-Oriented Programming Excellence**
-
-#### Polymorphism
-
-```java
-interface DataAccessor<T> {
-    T read(String key) throws SQLException;
-    T update(T entity) throws SQLException;
-}
+#### Chat Rooms
+```sql
+CREATE TABLE chat_rooms (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_name VARCHAR(100) NOT NULL UNIQUE,
+    created_by VARCHAR(50) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (created_by) REFERENCES users(username)
+)
 ```
 
-*Implementation: **`UserDAO implements DataAccessor<User>`*
-
-#### Inheritance
-
-* All GUI classes extend `JFrame` or `JDialog`
-* Custom panels extend `JPanel`
-
-#### Exception Handling
-
-```java
-try {
-    DatabaseUtil.transferFunds(sender, recipient, amount);
-} catch (SQLException ex) {
-    JOptionPane.showMessageDialog(this, "Transaction failed!");
-}
+#### Messages
+```sql
+CREATE TABLE messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_id INT NOT NULL,
+    sender_username VARCHAR(50) NOT NULL,
+    message_content TEXT NOT NULL,
+    message_type VARCHAR(20) DEFAULT 'Text',
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (room_id) REFERENCES chat_rooms(room_id),
+    FOREIGN KEY (sender_username) REFERENCES users(username)
+)
 ```
 
-#### Encapsulation
-
-```java
-class User {
-    private String username;
-    private String password;
-    private double balance;
-    // Getters & Setters
-}
+#### Payment Transactions
+```sql
+CREATE TABLE payment_transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    transaction_type VARCHAR(50) NOT NULL,
+    amount DOUBLE NOT NULL,
+    payment_method VARCHAR(50) NOT NULL,
+    status VARCHAR(20) DEFAULT 'Pending',
+    description TEXT,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (username) REFERENCES users(username)
+)
 ```
+
+#### Transactions (P2P Transfers)
+```sql
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender VARCHAR(50) NOT NULL,
+    recipient VARCHAR(50) NOT NULL,
+    amount DOUBLE NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender) REFERENCES users(username),
+    FOREIGN KEY (recipient) REFERENCES users(username)
+)
+```
+
+#### Portfolio (Stock Holdings)
+```sql
+CREATE TABLE portfolio (
+    username VARCHAR(50),
+    stock_symbol VARCHAR(10),
+    quantity INT DEFAULT 0,
+    PRIMARY KEY (username, stock_symbol),
+    FOREIGN KEY (username) REFERENCES users(username)
+)
+```
+
+#### Notes
+```sql
+CREATE TABLE notes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    title VARCHAR(100) NOT NULL,
+    content TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (username) REFERENCES users(username)
+)
+```
+
+## 🏗️ Project Structure
+
+```
+third-semester-web-project/
+├── src/main/
+│   ├── java/com/project/
+│   │   ├── dao/
+│   │   │   ├── UserDAO.java
+│   │   │   ├── GameDAO.java
+│   │   │   ├── ChatRoomDAO.java
+│   │   │   ├── MessageDAO.java
+│   │   │   ├── PaymentTransactionDAO.java
+│   │   │   ├── TransactionDAO.java
+│   │   │   └── DataAccessor.java
+│   │   ├── model/
+│   │   │   ├── User.java
+│   │   │   ├── Game.java
+│   │   │   ├── ChatRoom.java
+│   │   │   ├── Message.java
+│   │   │   ├── PaymentTransaction.java
+│   │   │   ├── Transaction.java
+│   │   │   └── Stock.java
+│   │   ├── servlet/
+│   │   │   ├── LoginServlet.java
+│   │   │   ├── DashboardServlet.java
+│   │   │   ├── GameServlet.java
+│   │   │   ├── ChatServlet.java
+│   │   │   ├── DigitalPaymentServlet.java
+│   │   │   ├── StockServlet.java
+│   │   │   └── PaymentServlet.java
+│   │   ├── service/
+│   │   │   └── NotesApp.java
+│   │   └── util/
+│   │       ├── DatabaseUtil.java
+│   │       └── ThemeManager.java
+│   └── webapp/
+│       ├── css/
+│       │   └── style.css
+│       ├── js/
+│       │   └── main.js
+│       ├── views/
+│       │   ├── login.jsp
+│       │   ├── dashboard.jsp
+│       │   ├── games.jsp
+│       │   ├── games/
+│       │   │   ├── snake.jsp
+│       │   │   ├── puzzle.jsp
+│       │   │   └── leaderboard.jsp
+│       │   ├── chat.jsp
+│       │   ├── chatRoom.jsp
+│       │   ├── digitalPayment.jsp
+│       │   ├── paymentHistory.jsp
+│       │   ├── stock.jsp
+│       │   ├── notes.jsp
+│       │   └── payment.jsp
+│       └── WEB-INF/
+│           └── web.xml
+└── pom.xml
+```
+
+## 🔧 Technologies Used
+
+- **Backend**: Java (Servlet/JSP)
+- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
+- **Database**: MySQL
+- **Build Tool**: Maven
+- **Server**: Apache Tomcat
+- **Web Framework**: Servlet API 4.0.1
+
+## 📦 Dependencies
+
+```xml
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+</dependency>
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.33</version>
+</dependency>
+
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Java 8+
+- MySQL 5.7+
+- Maven 3.6+
+- Apache Tomcat 9.0+
+
+### Installation
+
+1. **Clone/Setup the Project**
+   ```bash
+   cd d:\Coding\Java\Third_Sem_Java_Project_OS
+   ```
+
+2. **Configure Database**
+   - Update `src/main/java/com/project/util/DatabaseUtil.java`
+   - Set your MySQL connection details:
+     ```java
+     private static final String DB_URL = "jdbc:mysql://localhost:3306/project";
+     private static final String DB_USER = "root";
+     private static final String DB_PASS = "your_password";
+     ```
+
+3. **Build the Project**
+   ```bash
+   mvn clean install
+   ```
+
+4. **Deploy to Tomcat**
+   ```bash
+   mvn tomcat7:deploy
+   ```
+
+5. **Access the Application**
+   - URL: `http://localhost:8080/third-semester-web-project`
+   - Default credentials: `admin / admin123`
+
+## 🎮 Game Instructions
+
+### Snake Game
+- Use Arrow Keys or WASD to control the snake
+- Eat red food squares to grow and gain points
+- Avoid hitting walls and your own body
+- Three difficulty levels adjust speed
+- Scores are saved to leaderboard
+
+### Puzzle Game
+- Click tiles to find matching pairs
+- Each match removed from board
+- Complete all 8 pairs to win
+- Fewest moves = highest score
+- Multiple difficulty levels available
+
+## 💳 Payment System Usage
+
+1. **Deposit**: Add funds to your wallet
+2. **Withdraw**: Remove funds from your wallet
+3. **Transfer**: Send money to another user
+4. **History**: View all past transactions
+
+## 💬 Chat System Features
+
+- Create private chat rooms
+- Send messages to room members
+- View message history
+- Delete rooms (creator only)
+- Real-time message updates
+
+## 📈 Stock Market Features
+
+- View current stock prices
+- Real-time price updates
+- Buy/sell stocks
+- Track portfolio holdings
+- Market analysis tools
+
+## 🔐 Security Features
+
+- Session-based authentication
+- 30-minute session timeout
+- Password storage
+- SQL injection prevention (PreparedStatements)
+- HTTPS-ready architecture
+
+## 📱 Responsive Design
+
+- Mobile-friendly interface
+- Responsive grid layouts
+- Touch-friendly buttons
+- Optimized for all screen sizes
+
+## 🎨 UI/UX Features
+
+- Modern gradient design
+- Smooth animations
+- Interactive components
+- Loading indicators
+- Toast notifications
+- Color-coded status badges
+
+## 📝 Default Test Accounts
+
+| Username | Password | Balance |
+|----------|----------|---------|
+| admin    | admin123 | $50,000 |
+| user1    | password | $10,000 |
+| user2    | password | $10,000 |
+
+## 🐛 Troubleshooting
+
+### Database Connection Issues
+- Check MySQL is running
+- Verify connection credentials
+- Ensure database exists
+
+### Build Failures
+- Clean Maven cache: `mvn clean`
+- Update dependencies: `mvn dependency:resolve`
+- Check Java version compatibility
+
+### Servlet Not Found
+- Verify `@WebServlet` annotations
+- Check web.xml configuration
+- Restart Tomcat server
+
+## 🔄 Future Enhancements
+
+- [ ] WebSocket support for real-time chat
+- [ ] Email notifications
+- [ ] Advanced stock market analytics
+- [ ] Game achievements and badges
+- [ ] User profile customization
+- [ ] Mobile app integration
+- [ ] Cloud database support
+- [ ] Multi-language support
+
+## 📄 License
+
+This project is created for educational purposes.
+
+## 👨‍💻 Author
+
+Third Semester Java Project Team
+
+## 📞 Support
+
+For issues or questions, please contact the development team or refer to the documentation.
 
 ---
 
-##  Collections & Generics
+**Last Updated**: December 2025
+**Version**: 1.0.0
+**Status**: Active Development
 
-### **Efficient Data Management**
-
-#### Collections Framework
-
-```java
-private static final Map<String, User> activeUsers = new HashMap<>();
-private final List<Double> priceHistory = new ArrayList<>();
-private final Map<String, Stock> stocks = new LinkedHashMap<>();
-```
-
-#### Generics Implementation
-
-```java
-interface DataAccessor<T> {
-    T read(String key) throws SQLException;
-    T update(T entity) throws SQLException;
-    List<T> findAll() throws SQLException;
-}
-
-class UserDAO implements DataAccessor<User>
-```
-
----
-
-##  Multithreading & Synchronization
-
-### **Concurrent Operations**
-
-#### Multithreading
-
-```java
-new Thread(() -> executeTransfer(recipient, amount)).start();
-```
-
-Real-time stock updates:
-
-```java
-feedTimer = new javax.swing.Timer(1200, e -> {
-    if (!feedRunning) return;
-    updatePricesStep();
-});
-```
-
-#### Thread Safety
-
-* `SwingUtilities.invokeLater()` for UI updates
-* Separate threads for chat system networking
-* Timer-based background tasks
-
----
-
-##  Database Operations Classes
-
-### **Robust Data Management**
-
-#### Database Utility Class
-
-```java
-class DatabaseUtil {
-    // Connection management + Transactions
-}
-```
-
-#### DAO Pattern
-
-```java
-class UserDAO implements DataAccessor<User> {
-    public User create(User user);
-    public User read(String username);
-    public User update(User user);
-    public List<User> findAll();
-}
-```
-
-#### Transaction Management
-
-```java
-conn.setAutoCommit(false);
-// Execute operations
-conn.commit();
-```
-
----
-
-##  JDBC Connectivity
-
-### **Database Integration**
-
-#### JDBC Setup
-
-```java
-public static Connection getConnection() throws SQLException {
-    Class.forName("com.mysql.cj.jdbc.Driver");
-    return DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-}
-```
-
-#### Prepared Statements
-
-```java
-String sql = "INSERT INTO users (username, password, balance) VALUES (?, ?, ?)";
-PreparedStatement stmt = conn.prepareStatement(sql);
-```
-
----
-
-##  Application Showcase – Stock Market
-
-### **Real-time Financial Simulation**
-
-Features:
-
-* Live stock price updates
-* Interactive buy/sell actions
-* Portfolio tracking
-* Real-time graph rendering
-
-Technical Highlights:
-
-* Custom `StockGraphPanel`
-* Timer-based updates
-* Collections for history storage
-
----
-
-##  Application Showcase – Digital Payment
-
-### **Secure Transaction System**
-
-* Atomic transactions
-* Transaction history
-* Real-time balance updates
-
-```java
-DatabaseUtil.transferFunds(sender, recipient, amount);
-```
-
----
-
-##  Application Showcase – Chat System
-
-### **Network Communication**
-
-Features:
-
-* Client/Server architecture
-* Real-time messaging
-* Threaded message handling
-
-Implementation:
-
-* `ServerSocket` & `Socket`
-* Background threads
-* `SwingWorker`
-
----
-
-##  Games & Utilities
-
-### **Diverse App Suite**
-
-Games:
-
-* Snake
-* Typing Speed Test
-* RPG Adventure
-* Rock Paper Scissors
-* Number Guessing
-
-Utilities:
-
-* Calculator
-* Notes App (File I/O)
-* String utilities
-
----
-
-##  Theme Management System
-
-### **Dynamic UI Customization**
-
-```java
-enum ColorScheme { DARK, LIGHT, CYBER, OCEAN }
-```
-
-* Runtime theme switching
-* Font scaling
-* Consistent global appearance
-
----
-
-##  Architecture Overview
-
-### **System Design**
-
-Components:
-
-* Core Framework
-* DAO/Data Layer
-* Application Layer
-* Theme Engine
-
-Patterns Used:
-
-* Singleton
-* DAO
-* MVC
-
----
-
-##  Code Quality & Best Practices
-
-### **Professional Standards**
-
-✔ Clean Package Structure ✔ Exception Handling ✔ Documentation & Comments ✔ Modular Code
-
----
-
-##  Demonstration
-
-### **Live Demo Includes:**
-
-* Login → Dashboard
-* Stock Market
-* Digital Payments
-* Chat Communication
-* Games
-* Theme Switch
-
----
 
 *This project was developed as part of an academic curriculum to demonstrate comprehensive Java programming skills, database integration, and software engineering principles.*
 
