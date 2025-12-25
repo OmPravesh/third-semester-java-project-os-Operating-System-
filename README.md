@@ -192,6 +192,7 @@ mvn clean package -DskipTests
 WebOS/
 ├── pom.xml
 ├── README.md
+├──images
 ├── src/
 │   └── main/
 │       ├── java/
